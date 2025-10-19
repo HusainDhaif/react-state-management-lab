@@ -101,6 +101,7 @@ const App = () => {
   };
 
   const totalStrength = team.reduce((sum, fighter) => sum + fighter.strength, 0);
+  const totalAgility = team.reduce((sum, fighter) => sum + fighter.agility, 0);
 
   return (
     <>
@@ -109,6 +110,7 @@ const App = () => {
       
       <h2>Your Team</h2>
       <p>Total Strength: {totalStrength}</p>
+      <p>Total Agility: {totalAgility}</p>
       {team.length === 0 ? (
         <p>Pick some team members!</p>
       ) : (
