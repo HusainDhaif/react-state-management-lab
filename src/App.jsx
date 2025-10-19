@@ -100,12 +100,15 @@ const App = () => {
     setMoney(money - fighter.price);
   };
 
+  const totalStrength = team.reduce((sum, fighter) => sum + fighter.strength, 0);
+
   return (
     <>
       <h1>Zombie Fighters</h1>
       <p>Money: ${money}</p>
       
       <h2>Your Team</h2>
+      <p>Total Strength: {totalStrength}</p>
       {team.length === 0 ? (
         <p>Pick some team members!</p>
       ) : (
